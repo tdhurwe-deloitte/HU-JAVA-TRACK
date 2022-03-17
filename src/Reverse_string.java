@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -6,12 +7,9 @@ public class Reverse_string {
 
     public static void reverse_string(String s1)
     {
-        String[] arr = s1.split(" ");
-        List<String> list = new ArrayList<>();
-        for(int i = arr.length - 1; i >= 0; i--)
-        {
-            list.add(arr[i]);
-        }
+        String arr[] = s1.split(" ");
+        List<String> list = Arrays.asList(arr);
+        Collections.reverse(list);
         System.out.println(list);
     }
 
