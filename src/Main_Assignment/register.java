@@ -80,8 +80,6 @@ public class register {
             writer.append(",");
             writer.append(pass);
             writer.append(",");
-//            str = create_id();
-//            k = id_val + str;
             writer.append("DC-00"+Math.random());
             writer.append(",");
             writer.close();

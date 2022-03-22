@@ -6,26 +6,32 @@ import java.io.FileWriter;
 import java.util.Scanner;
 
 public class AddData {
-    public static void insert_data(){
+    public static void insert_data(String user){
         String path = "src\\employee.csv";
         String name, company_name, designation, address;
         int age, salary, phone_num;
         Scanner sc = new Scanner(System.in);
         System.out.print("Name : ");
         name = sc.nextLine();
+        System.out.println();
         System.out.print("Age : ");
         age = sc.nextInt();
+        System.out.println();
         System.out.print("Company name : ");
         company_name = sc.nextLine();
+        System.out.println();
         System.out.print("Designation : ");
         designation = sc.nextLine();
         System.out.print("Salary : ");
         salary = sc.nextInt();
+        System.out.println();
         String s = Integer.toString(salary);
         System.out.println("Address : ");
         address = sc.nextLine();
+        System.out.println();
         System.out.println("Phone no : ");
         phone_num = sc.nextInt();
+        System.out.println();
         String p = Integer.toString(phone_num);
         try{
             FileWriter writer = new FileWriter(path, true);
@@ -46,6 +52,7 @@ public class AddData {
         catch (Exception e){
             System.out.println("Error : " + e);
         }
+        menu.options(user);
 }
     public static void add_data(String user){
         String path = "src\\employee.csv";
@@ -59,7 +66,7 @@ public class AddData {
                 String[] row = line.split(",");
                 for (String index : row) {
                     if (user.equals(row[0])) {
-                        insert_data();
+                        insert_data(user);
                         break first;
                     }
                 }

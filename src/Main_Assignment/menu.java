@@ -12,15 +12,18 @@ public class menu {
         switch (num){
             case 1:
                 AddData.add_data(uname);
+                options(uname);
                 break;
             case 2:
-                System.out.println("list user data");
+                ListData.list_data(uname);
+                options(uname);
                 break;
             case 3:
                 System.out.println("update user data");
                 break;
             case 4:
-                System.out.println("delete user data");
+                DeleteData.delete_data(uname);
+                options(uname);
                 break;
             case 5:
                 System.out.println("Thank you");
