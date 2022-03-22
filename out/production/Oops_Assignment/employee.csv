@@ -1,4 +1,1 @@
-uname,password,uid,name,company-name,designation,salary,address,phone no
-,,,,,,,,
-usbn,123@Abc,DC-0011,,,,,,
-hulk,123@Abcd,DC-0012,,,,,,
+uname,password,uid,name,age,company name,designation,salary,address,phone no

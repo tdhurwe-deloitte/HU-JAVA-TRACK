@@ -81,7 +81,8 @@ public class register {
             writer.append(pass);
             writer.append(",");
             writer.append("DC-00"+Math.random());
-            writer.append(",");
+//            writer.append(",");
+            AddData.add_data(uname);
             writer.close();
             System.out.println("Registered successfully");
         }

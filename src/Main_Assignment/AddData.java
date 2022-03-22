@@ -16,6 +16,7 @@ public class AddData {
         System.out.println();
         System.out.print("Age : ");
         age = sc.nextInt();
+        String k = Integer.toString(age);
         System.out.println();
         System.out.print("Company name : ");
         company_name = sc.nextLine();
@@ -35,7 +36,10 @@ public class AddData {
         String p = Integer.toString(phone_num);
         try{
             FileWriter writer = new FileWriter(path, true);
+            writer.append(",");
             writer.append(name);
+            writer.append(",");
+            writer.append(k);
             writer.append(",");
             writer.append(company_name);
             writer.append(",");
@@ -46,7 +50,7 @@ public class AddData {
             writer.append(address);
             writer.append(",");
             writer.append(p);
-            writer.append(",");
+            writer.append(",\n");
             writer.close();
         }
         catch (Exception e){
